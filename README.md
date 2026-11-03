@@ -1,6 +1,6 @@
 # Bub’s Real Good Weddings & BBQ Inc.
 
-Vendor onboarding demo, saved November 2, 2026. Source snapshot: `7880c9f0fb131186368e27b249a310da7224e527` from the existing Sites checkout. This is an independent local repository; no remote has been configured.
+Vendor onboarding demo, saved November 2, 2026. Source snapshot: `7880c9f0fb131186368e27b249a310da7224e527` from the existing Sites checkout. GitHub repository: https://github.com/99cshea/bubs_wedding_repo. This snapshot preserves the current application source and handoff notes.
 
 ## Work completed
 
