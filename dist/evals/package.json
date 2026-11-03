@@ -1,0 +1,11 @@
+{
+  "name": "bubs-profile-evals",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "eval": "node run-evals.cjs"
+  },
+  "devDependencies": {
+    "promptfoo": "0.125.1"
+  }
+}

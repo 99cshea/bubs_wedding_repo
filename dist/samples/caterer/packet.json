@@ -1,0 +1,361 @@
+{
+  "type": "Caterer",
+  "vendor": "Smoke & Honey Catering",
+  "oldPrice": "$75 per guest",
+  "documents": {
+    "website": {
+      "id": "website",
+      "title": "Vendor website snapshot",
+      "filename": "website.txt",
+      "text": "Smoke & Honey Catering\nABOUT & CONTACT - website snapshot\nCaptured November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nSlow-smoked favorites and generous Southern hospitality, served with a fresh seasonal twist. Smoke & Honey brings people together over real good food.\n\nOur booking contact is Jordan Brooks. Email jordan@smokeandhoney.example or call (512) 555-0129.\nOur studio address is 1900 Manor Road, Austin, TX 78722. Our service territory is Austin + 60-mile service radius.\nWe have been in business for 8 years.\nFind our site at https://smokehoneycatering.example.\n\nPackages start at $75 per guest.\nPlease confirm the fulfillment deadline at booking.\n\nEditor note: this snapshot retains old pricing and timeline information, intentionally, for the onboarding exercise."
+    },
+    "call": {
+      "id": "call",
+      "title": "Introductory call transcript",
+      "filename": "intro-call-transcript.txt",
+      "text": "BUB'S VENDOR INTRODUCTION\nCall transcript | November 1, 2026, 10:00 a.m.\nRep: Jamie Rivera | Vendor: Jordan Brooks, Smoke & Honey Catering\nFICTIONAL SAMPLE SOURCE\n\n[00:00] Jamie: Tell me about what you do and who you are a good fit for.\n[00:19] Jordan Brooks: We offer BBQ catering, buffet service, vegetarian menus, late-night snacks. Our style is Texas barbecue with seasonal Southern sides. Capacity-wise, 50–250 guests; 50-guest minimum.\n\n[02:10] Jamie: Walk me through what's included and what you need.\n[02:22] Jordan Brooks: Standard service is 3-hour staffed dinner service. The team is Chef + one server per 25 guests. We can customize with Vegetarian mains; gluten-free sides; late-night snacks. Exclusions are Alcohol, tables, linens, and china. From the venue or client, we need Potable water; covered prep area; loading access.\n\n[06:05] Jamie: How do bookings and payments work?\n[06:20] Jordan Brooks: The deposit is 30% non-refundable retainer. The balance is due 30 days before the event. We recommend booking 9–12 months ahead.\n[07:02] Jamie: And changes or cancellations?\n[07:14] Jordan Brooks: Retainer is non-refundable; within 30 days the full balance is due. For rescheduling: One date change within 12 months, subject to availability.\n\n[09:35] Jamie: What happens on the day?\n[09:46] Jordan Brooks: Two-hour load-in; 45-minute breakdown. Our backup plan is Backup warming equipment; alternate supplier; weather-protected buffet.\n[10:50] Jamie: What about delivery and deadlines?\n[11:02] Jordan Brooks: The deadline on the website is vague. I will send the actual planning or fulfillment deadline. I'll email you the latest timeline.\n\n[13:12] Jamie: Please also confirm the package prices and send insurance documentation.\n[13:25] Jordan Brooks: The website rates are out of date. I'll send our current rate card and a follow-up email. I still need to send our certificate.\n\n[14:00] Jamie: Thanks. We will keep the profile pending until the documents are reviewed."
+    },
+    "rates": {
+      "id": "rates",
+      "title": "2027 package rate card",
+      "filename": "rates.txt",
+      "text": "Smoke & Honey Catering\n2027 PACKAGE RATE CARD\nSent November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nEntry package name: Smokehouse\n\nEntry starting price: $85 per guest\n\nEntry package inclusions: Two meats; three sides; bread; disposable serviceware\n\nSignature package name: Gather Round\n\nSignature starting price: $105 per guest\n\nSignature package inclusions: Three meats; four sides; staffed buffet; dessert\n\nPremium package name: The Whole Feast\n\nPremium starting price: $135 per guest\n\nPremium package inclusions: Cocktail bites; three meats; four sides; dessert; china\n\nOvertime / extra service rate: $45 per server / hour\n\nTravel charges: First 50 miles included; $2 / mile beyond, round trip\n\nTax / additional fees: Sales tax added where applicable; no automatic gratuity\n\nAll quotes depend on scope and availability. This card supersedes the prior website rates."
+    },
+    "portfolio": {
+      "id": "portfolio",
+      "title": "Portfolio & listing brief",
+      "filename": "portfolio.txt",
+      "text": "Smoke & Honey Catering\nPORTFOLIO & LISTING BRIEF\nNovember 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nListing headline: A feast worth gathering around.\n\nPortfolio collections / links: smokehoneycatering.example/portfolio; /collections/hill-country\n\nFeatured event description: 180-guest ranch reception with vegetarian smoked-mushroom option\n\nPortfolio permission / credit: Vendor grants listing display permission; credit the vendor by business name\n\nSearch tags: BBQ, Southern, buffet, vegetarian options\n\nSuggested public bio:\nSlow-smoked favorites and generous Southern hospitality, served with a fresh seasonal twist. Smoke & Honey brings people together over real good food.\n\nThe rep may edit the public copy for clarity without adding unsupported claims."
+    },
+    "email": {
+      "id": "email",
+      "title": "Vendor follow-up email",
+      "filename": "vendor-follow-up.eml",
+      "text": "From: Jordan Brooks <jordan@smokeandhoney.example>\nTo: Jamie Rivera <jamie@bubs.example>\nDate: Mon, 02 Nov 2026 09:15:00 -0500\nSubject: Current pricing, timeline, and outstanding documents\nContent-Type: text/plain; charset=utf-8\n\nFICTIONAL SAMPLE EMAIL\n\nHi Jamie,\n\nThanks for the call yesterday. Please use $85 per guest as our current entry starting price. The website's $75 per guest rate is from last season; the attached 2027 rate card has the correct packages.\n\nOur confirmed delivery / planning timeline is: Final menu and guaranteed guest count due 14 days before event. Please use this instead of the old or incomplete timeline discussed on the call.\n\nOur applicable licenses are current, but I have not supplied supporting documentation yet. I will send our insurance certificate separately; it is not attached to this email.\n\nJuniper Planning Co. can provide a professional reference on request.\n\nBest,\nJordan Brooks\n\nAttachments: rate-card.txt\nInsurance certificate: not attached."
+    }
+  },
+  "fields": {
+    "name": {
+      "value": "Smoke & Honey Catering",
+      "doc": "website",
+      "start": 0,
+      "end": 22,
+      "kind": "direct"
+    },
+    "contact": {
+      "value": "Jordan Brooks",
+      "doc": "website",
+      "start": 286,
+      "end": 299,
+      "kind": "direct"
+    },
+    "email": {
+      "value": "jordan@smokeandhoney.example",
+      "doc": "website",
+      "start": 307,
+      "end": 335,
+      "kind": "direct"
+    },
+    "phone": {
+      "value": "(512) 555-0129",
+      "doc": "website",
+      "start": 344,
+      "end": 358,
+      "kind": "direct"
+    },
+    "address": {
+      "value": "1900 Manor Road, Austin, TX 78722",
+      "doc": "website",
+      "start": 382,
+      "end": 415,
+      "kind": "direct"
+    },
+    "area": {
+      "value": "Austin + 60-mile service radius",
+      "doc": "website",
+      "start": 442,
+      "end": 473,
+      "kind": "direct"
+    },
+    "years": {
+      "value": "8 years",
+      "doc": "website",
+      "start": 504,
+      "end": 511,
+      "kind": "direct"
+    },
+    "website": {
+      "value": "https://smokehoneycatering.example",
+      "doc": "website",
+      "start": 530,
+      "end": 564,
+      "kind": "direct"
+    },
+    "services": {
+      "value": "BBQ catering, buffet service, vegetarian menus, late-night snacks",
+      "doc": "call",
+      "start": 269,
+      "end": 334,
+      "kind": "direct"
+    },
+    "style": {
+      "value": "Texas barbecue with seasonal Southern sides",
+      "doc": "call",
+      "start": 349,
+      "end": 392,
+      "kind": "direct"
+    },
+    "capacity": {
+      "value": "50–250 guests; 50-guest minimum",
+      "doc": "call",
+      "start": 409,
+      "end": 440,
+      "kind": "direct"
+    },
+    "coverage": {
+      "value": "3-hour staffed dinner service",
+      "doc": "call",
+      "start": 552,
+      "end": 581,
+      "kind": "direct"
+    },
+    "team": {
+      "value": "Chef + one server per 25 guests",
+      "doc": "call",
+      "start": 595,
+      "end": 626,
+      "kind": "direct"
+    },
+    "custom": {
+      "value": "Vegetarian mains; gluten-free sides; late-night snacks",
+      "doc": "call",
+      "start": 650,
+      "end": 704,
+      "kind": "direct"
+    },
+    "exclusions": {
+      "value": "Alcohol, tables, linens, and china",
+      "doc": "call",
+      "start": 721,
+      "end": 755,
+      "kind": "direct"
+    },
+    "requirements": {
+      "value": "Potable water; covered prep area; loading access",
+      "doc": "call",
+      "start": 791,
+      "end": 839,
+      "kind": "direct"
+    },
+    "package1": {
+      "value": "Smokehouse",
+      "doc": "rates",
+      "start": 115,
+      "end": 125,
+      "kind": "direct"
+    },
+    "price": {
+      "value": "$85 per guest",
+      "doc": "email",
+      "start": 307,
+      "end": 320,
+      "kind": "direct"
+    },
+    "includes1": {
+      "value": "Two meats; three sides; bread; disposable serviceware",
+      "doc": "rates",
+      "start": 190,
+      "end": 243,
+      "kind": "direct"
+    },
+    "package2": {
+      "value": "Gather Round",
+      "doc": "rates",
+      "start": 269,
+      "end": 281,
+      "kind": "direct"
+    },
+    "price2": {
+      "value": "$105 per guest",
+      "doc": "rates",
+      "start": 309,
+      "end": 323,
+      "kind": "direct"
+    },
+    "includes2": {
+      "value": "Three meats; four sides; staffed buffet; dessert",
+      "doc": "rates",
+      "start": 355,
+      "end": 403,
+      "kind": "direct"
+    },
+    "package3": {
+      "value": "The Whole Feast",
+      "doc": "rates",
+      "start": 427,
+      "end": 442,
+      "kind": "direct"
+    },
+    "price3": {
+      "value": "$135 per guest",
+      "doc": "rates",
+      "start": 468,
+      "end": 482,
+      "kind": "direct"
+    },
+    "includes3": {
+      "value": "Cocktail bites; three meats; four sides; dessert; china",
+      "doc": "rates",
+      "start": 512,
+      "end": 567,
+      "kind": "direct"
+    },
+    "overtime": {
+      "value": "$45 per server / hour",
+      "doc": "rates",
+      "start": 600,
+      "end": 621,
+      "kind": "direct"
+    },
+    "travel": {
+      "value": "First 50 miles included; $2 / mile beyond, round trip",
+      "doc": "rates",
+      "start": 639,
+      "end": 692,
+      "kind": "direct"
+    },
+    "tax": {
+      "value": "Sales tax added where applicable; no automatic gratuity",
+      "doc": "rates",
+      "start": 717,
+      "end": 772,
+      "kind": "direct"
+    },
+    "deposit": {
+      "value": "30% non-refundable retainer",
+      "doc": "call",
+      "start": 930,
+      "end": 957,
+      "kind": "direct"
+    },
+    "balance": {
+      "value": "30 days before the event",
+      "doc": "call",
+      "start": 978,
+      "end": 1002,
+      "kind": "direct"
+    },
+    "lead": {
+      "value": "9–12 months",
+      "doc": "call",
+      "start": 1025,
+      "end": 1036,
+      "kind": "direct"
+    },
+    "setup": {
+      "value": "Two-hour load-in; 45-minute breakdown",
+      "doc": "call",
+      "start": 1321,
+      "end": 1358,
+      "kind": "direct"
+    },
+    "delivery": {
+      "value": "Final menu and guaranteed guest count due 14 days before event",
+      "doc": "email",
+      "start": 514,
+      "end": 576,
+      "kind": "direct"
+    },
+    "cancellation": {
+      "value": "Retainer is non-refundable; within 30 days the full balance is due",
+      "doc": "call",
+      "start": 1112,
+      "end": 1178,
+      "kind": "direct"
+    },
+    "reschedule": {
+      "value": "One date change within 12 months, subject to availability",
+      "doc": "call",
+      "start": 1198,
+      "end": 1255,
+      "kind": "direct"
+    },
+    "backup": {
+      "value": "Backup warming equipment; alternate supplier; weather-protected buffet",
+      "doc": "call",
+      "start": 1379,
+      "end": 1449,
+      "kind": "direct"
+    },
+    "bio": {
+      "value": "Slow-smoked favorites and generous Southern hospitality, served with a fresh seasonal twist. Smoke & Honey brings people together over real good food.",
+      "doc": "portfolio",
+      "start": 521,
+      "end": 671,
+      "kind": "direct"
+    },
+    "headline": {
+      "value": "A feast worth gathering around.",
+      "doc": "portfolio",
+      "start": 111,
+      "end": 142,
+      "kind": "direct"
+    },
+    "gallery": {
+      "value": "smokehoneycatering.example/portfolio; /collections/hill-country",
+      "doc": "portfolio",
+      "start": 175,
+      "end": 238,
+      "kind": "direct"
+    },
+    "featured": {
+      "value": "180-guest ranch reception with vegetarian smoked-mushroom option",
+      "doc": "portfolio",
+      "start": 268,
+      "end": 332,
+      "kind": "direct"
+    },
+    "credit": {
+      "value": "Vendor grants listing display permission; credit the vendor by business name",
+      "doc": "portfolio",
+      "start": 365,
+      "end": 441,
+      "kind": "direct"
+    },
+    "tags": {
+      "value": "BBQ, Southern, buffet, vegetarian options",
+      "doc": "portfolio",
+      "start": 456,
+      "end": 497,
+      "kind": "direct"
+    },
+    "insurance": {
+      "value": "Pending — certificate not supplied",
+      "doc": "email",
+      "start": 751,
+      "end": 834,
+      "kind": "missing-document"
+    },
+    "license": {
+      "value": "Vendor reports applicable licenses current; documentation not verified",
+      "doc": "email",
+      "start": 660,
+      "end": 750,
+      "kind": "vendor-reported"
+    },
+    "reference": {
+      "value": "Juniper Planning Co. — reference available on request",
+      "doc": "email",
+      "start": 836,
+      "end": 905,
+      "kind": "source-summary"
+    },
+    "followup": {
+      "value": "Request current liability insurance certificate and coverage expiry",
+      "doc": "email",
+      "start": 751,
+      "end": 834,
+      "kind": "follow-up-draft"
+    }
+  }
+}

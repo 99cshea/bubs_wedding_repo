@@ -1,0 +1,9 @@
+{
+  "sha256": "81118bfcbad203067f24bf7fbb910c2d846b66dafff735a870f0e95f0ddfcb24",
+  "name": "Golden Hour Photography",
+  "limit": "$1,000,000 per occurrence; $2,000,000 aggregate",
+  "start": "2027-01-01",
+  "expiry": "2027-12-31",
+  "policy": "DEMO-GHP-2027-001",
+  "file": "golden-hour-sample-certificate.pdf"
+}

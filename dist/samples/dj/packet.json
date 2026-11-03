@@ -1,0 +1,361 @@
+{
+  "type": "DJ",
+  "vendor": "Good Company DJs",
+  "oldPrice": "$2,000",
+  "documents": {
+    "website": {
+      "id": "website",
+      "title": "Vendor website snapshot",
+      "filename": "website.txt",
+      "text": "Good Company DJs\nABOUT & CONTACT - website snapshot\nCaptured November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nGreat music. Full dance floors. Good Company creates a soundtrack that feels like you, from the first walk down the aisle to the last song of the night.\n\nOur booking contact is Sam Taylor. Email sam@goodcompany.example or call (512) 555-0188.\nOur studio address is 2400 South Lamar Boulevard, Austin, TX 78704. Our service territory is Austin + Central Texas.\nWe have been in business for 8 years.\nFind our site at https://goodcompanydjs.example.\n\nPackages start at $2,000.\nPlease confirm the fulfillment deadline at booking.\n\nEditor note: this snapshot retains old pricing and timeline information, intentionally, for the onboarding exercise."
+    },
+    "call": {
+      "id": "call",
+      "title": "Introductory call transcript",
+      "filename": "intro-call-transcript.txt",
+      "text": "BUB'S VENDOR INTRODUCTION\nCall transcript | November 1, 2026, 10:00 a.m.\nRep: Jamie Rivera | Vendor: Sam Taylor, Good Company DJs\nFICTIONAL SAMPLE SOURCE\n\n[00:00] Jamie: Tell me about what you do and who you are a good fit for.\n[00:19] Sam Taylor: We offer Wedding DJ, ceremony sound, MC services, dance floor lighting. Our style is Open-format dance music; collaborative playlist planning. Capacity-wise, Up to 250 guests; one event per DJ per day.\n\n[02:10] Jamie: Walk me through what's included and what you need.\n[02:22] Sam Taylor: Standard service is 6 hours. The team is One DJ / MC. We can customize with Custom edits; uplighting; additional sound zones. Exclusions are Live musicians and stage rental. From the venue or client, we need Two dedicated 20A outlets; covered level performance area.\n\n[06:05] Jamie: How do bookings and payments work?\n[06:20] Sam Taylor: The deposit is 30% non-refundable retainer. The balance is due 30 days before the event. We recommend booking 9–12 months ahead.\n[07:02] Jamie: And changes or cancellations?\n[07:14] Sam Taylor: Retainer is non-refundable; within 30 days the full balance is due. For rescheduling: One date change within 12 months, subject to availability.\n\n[09:35] Jamie: What happens on the day?\n[09:46] Sam Taylor: 90 minutes for sound check and setup. Our backup plan is Backup controller, laptop, and wireless microphone.\n[10:50] Jamie: What about delivery and deadlines?\n[11:02] Sam Taylor: The deadline on the website is vague. I will send the actual planning or fulfillment deadline. I'll email you the latest timeline.\n\n[13:12] Jamie: Please also confirm the package prices and send insurance documentation.\n[13:25] Sam Taylor: The website rates are out of date. I'll send our current rate card and a follow-up email. I still need to send our certificate.\n\n[14:00] Jamie: Thanks. We will keep the profile pending until the documents are reviewed."
+    },
+    "rates": {
+      "id": "rates",
+      "title": "2027 package rate card",
+      "filename": "rates.txt",
+      "text": "Good Company DJs\n2027 PACKAGE RATE CARD\nSent November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nEntry package name: Good Times\n\nEntry starting price: $2,400\n\nEntry package inclusions: 6 hours DJ / MC; reception sound; planning call\n\nSignature package name: Great Company\n\nSignature starting price: $3,200\n\nSignature package inclusions: 8 hours; ceremony sound; reception DJ / MC; dance lights\n\nPremium package name: All Night\n\nPremium starting price: $4,100\n\nPremium package inclusions: 10 hours; ceremony and cocktail sound; uplighting; DJ / MC\n\nOvertime / extra service rate: $250 / hour\n\nTravel charges: First 50 miles included; $2 / mile beyond, round trip\n\nTax / additional fees: Sales tax added where applicable; no automatic gratuity\n\nAll quotes depend on scope and availability. This card supersedes the prior website rates."
+    },
+    "portfolio": {
+      "id": "portfolio",
+      "title": "Portfolio & listing brief",
+      "filename": "portfolio.txt",
+      "text": "Good Company DJs\nPORTFOLIO & LISTING BRIEF\nNovember 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nListing headline: For the one-more-song kind of night.\n\nPortfolio collections / links: goodcompanydjs.example/portfolio; /collections/hill-country\n\nFeatured event description: 200-guest downtown reception; disco and 2000s dance set\n\nPortfolio permission / credit: Vendor grants listing display permission; credit the vendor by business name\n\nSearch tags: DJ, MC, open format, dance floor\n\nSuggested public bio:\nGreat music. Full dance floors. Good Company creates a soundtrack that feels like you, from the first walk down the aisle to the last song of the night.\n\nThe rep may edit the public copy for clarity without adding unsupported claims."
+    },
+    "email": {
+      "id": "email",
+      "title": "Vendor follow-up email",
+      "filename": "vendor-follow-up.eml",
+      "text": "From: Sam Taylor <sam@goodcompany.example>\nTo: Jamie Rivera <jamie@bubs.example>\nDate: Mon, 02 Nov 2026 09:15:00 -0500\nSubject: Current pricing, timeline, and outstanding documents\nContent-Type: text/plain; charset=utf-8\n\nFICTIONAL SAMPLE EMAIL\n\nHi Jamie,\n\nThanks for the call yesterday. Please use $2,400 as our current entry starting price. The website's $2,000 rate is from last season; the attached 2027 rate card has the correct packages.\n\nOur confirmed delivery / planning timeline is: Music plan finalized 14 days before event. Please use this instead of the old or incomplete timeline discussed on the call.\n\nOur applicable licenses are current, but I have not supplied supporting documentation yet. I will send our insurance certificate separately; it is not attached to this email.\n\nJuniper Planning Co. can provide a professional reference on request.\n\nBest,\nSam Taylor\n\nAttachments: rate-card.txt\nInsurance certificate: not attached."
+    }
+  },
+  "fields": {
+    "name": {
+      "value": "Good Company DJs",
+      "doc": "website",
+      "start": 0,
+      "end": 16,
+      "kind": "direct"
+    },
+    "contact": {
+      "value": "Sam Taylor",
+      "doc": "website",
+      "start": 282,
+      "end": 292,
+      "kind": "direct"
+    },
+    "email": {
+      "value": "sam@goodcompany.example",
+      "doc": "website",
+      "start": 300,
+      "end": 323,
+      "kind": "direct"
+    },
+    "phone": {
+      "value": "(512) 555-0188",
+      "doc": "website",
+      "start": 332,
+      "end": 346,
+      "kind": "direct"
+    },
+    "address": {
+      "value": "2400 South Lamar Boulevard, Austin, TX 78704",
+      "doc": "website",
+      "start": 370,
+      "end": 414,
+      "kind": "direct"
+    },
+    "area": {
+      "value": "Austin + Central Texas",
+      "doc": "website",
+      "start": 441,
+      "end": 463,
+      "kind": "direct"
+    },
+    "years": {
+      "value": "8 years",
+      "doc": "website",
+      "start": 494,
+      "end": 501,
+      "kind": "direct"
+    },
+    "website": {
+      "value": "https://goodcompanydjs.example",
+      "doc": "website",
+      "start": 520,
+      "end": 550,
+      "kind": "direct"
+    },
+    "services": {
+      "value": "Wedding DJ, ceremony sound, MC services, dance floor lighting",
+      "doc": "call",
+      "start": 257,
+      "end": 318,
+      "kind": "direct"
+    },
+    "style": {
+      "value": "Open-format dance music; collaborative playlist planning",
+      "doc": "call",
+      "start": 333,
+      "end": 389,
+      "kind": "direct"
+    },
+    "capacity": {
+      "value": "Up to 250 guests; one event per DJ per day",
+      "doc": "call",
+      "start": 406,
+      "end": 448,
+      "kind": "direct"
+    },
+    "coverage": {
+      "value": "6 hours",
+      "doc": "call",
+      "start": 557,
+      "end": 564,
+      "kind": "direct"
+    },
+    "team": {
+      "value": "One DJ / MC",
+      "doc": "call",
+      "start": 578,
+      "end": 589,
+      "kind": "direct"
+    },
+    "custom": {
+      "value": "Custom edits; uplighting; additional sound zones",
+      "doc": "call",
+      "start": 613,
+      "end": 661,
+      "kind": "direct"
+    },
+    "exclusions": {
+      "value": "Live musicians and stage rental",
+      "doc": "call",
+      "start": 678,
+      "end": 709,
+      "kind": "direct"
+    },
+    "requirements": {
+      "value": "Two dedicated 20A outlets; covered level performance area",
+      "doc": "call",
+      "start": 745,
+      "end": 802,
+      "kind": "direct"
+    },
+    "package1": {
+      "value": "Good Times",
+      "doc": "rates",
+      "start": 109,
+      "end": 119,
+      "kind": "direct"
+    },
+    "price": {
+      "value": "$2,400",
+      "doc": "email",
+      "start": 299,
+      "end": 305,
+      "kind": "direct"
+    },
+    "includes1": {
+      "value": "6 hours DJ / MC; reception sound; planning call",
+      "doc": "rates",
+      "start": 177,
+      "end": 224,
+      "kind": "direct"
+    },
+    "package2": {
+      "value": "Great Company",
+      "doc": "rates",
+      "start": 250,
+      "end": 263,
+      "kind": "direct"
+    },
+    "price2": {
+      "value": "$3,200",
+      "doc": "rates",
+      "start": 291,
+      "end": 297,
+      "kind": "direct"
+    },
+    "includes2": {
+      "value": "8 hours; ceremony sound; reception DJ / MC; dance lights",
+      "doc": "rates",
+      "start": 329,
+      "end": 385,
+      "kind": "direct"
+    },
+    "package3": {
+      "value": "All Night",
+      "doc": "rates",
+      "start": 409,
+      "end": 418,
+      "kind": "direct"
+    },
+    "price3": {
+      "value": "$4,100",
+      "doc": "rates",
+      "start": 444,
+      "end": 450,
+      "kind": "direct"
+    },
+    "includes3": {
+      "value": "10 hours; ceremony and cocktail sound; uplighting; DJ / MC",
+      "doc": "rates",
+      "start": 480,
+      "end": 538,
+      "kind": "direct"
+    },
+    "overtime": {
+      "value": "$250 / hour",
+      "doc": "rates",
+      "start": 571,
+      "end": 582,
+      "kind": "direct"
+    },
+    "travel": {
+      "value": "First 50 miles included; $2 / mile beyond, round trip",
+      "doc": "rates",
+      "start": 600,
+      "end": 653,
+      "kind": "direct"
+    },
+    "tax": {
+      "value": "Sales tax added where applicable; no automatic gratuity",
+      "doc": "rates",
+      "start": 678,
+      "end": 733,
+      "kind": "direct"
+    },
+    "deposit": {
+      "value": "30% non-refundable retainer",
+      "doc": "call",
+      "start": 890,
+      "end": 917,
+      "kind": "direct"
+    },
+    "balance": {
+      "value": "30 days before the event",
+      "doc": "call",
+      "start": 938,
+      "end": 962,
+      "kind": "direct"
+    },
+    "lead": {
+      "value": "9–12 months",
+      "doc": "call",
+      "start": 985,
+      "end": 996,
+      "kind": "direct"
+    },
+    "setup": {
+      "value": "90 minutes for sound check and setup",
+      "doc": "call",
+      "start": 1275,
+      "end": 1311,
+      "kind": "direct"
+    },
+    "delivery": {
+      "value": "Music plan finalized 14 days before event",
+      "doc": "email",
+      "start": 492,
+      "end": 533,
+      "kind": "direct"
+    },
+    "cancellation": {
+      "value": "Retainer is non-refundable; within 30 days the full balance is due",
+      "doc": "call",
+      "start": 1069,
+      "end": 1135,
+      "kind": "direct"
+    },
+    "reschedule": {
+      "value": "One date change within 12 months, subject to availability",
+      "doc": "call",
+      "start": 1155,
+      "end": 1212,
+      "kind": "direct"
+    },
+    "backup": {
+      "value": "Backup controller, laptop, and wireless microphone",
+      "doc": "call",
+      "start": 1332,
+      "end": 1382,
+      "kind": "direct"
+    },
+    "bio": {
+      "value": "Great music. Full dance floors. Good Company creates a soundtrack that feels like you, from the first walk down the aisle to the last song of the night.",
+      "doc": "portfolio",
+      "start": 498,
+      "end": 650,
+      "kind": "direct"
+    },
+    "headline": {
+      "value": "For the one-more-song kind of night.",
+      "doc": "portfolio",
+      "start": 105,
+      "end": 141,
+      "kind": "direct"
+    },
+    "gallery": {
+      "value": "goodcompanydjs.example/portfolio; /collections/hill-country",
+      "doc": "portfolio",
+      "start": 174,
+      "end": 233,
+      "kind": "direct"
+    },
+    "featured": {
+      "value": "200-guest downtown reception; disco and 2000s dance set",
+      "doc": "portfolio",
+      "start": 263,
+      "end": 318,
+      "kind": "direct"
+    },
+    "credit": {
+      "value": "Vendor grants listing display permission; credit the vendor by business name",
+      "doc": "portfolio",
+      "start": 351,
+      "end": 427,
+      "kind": "direct"
+    },
+    "tags": {
+      "value": "DJ, MC, open format, dance floor",
+      "doc": "portfolio",
+      "start": 442,
+      "end": 474,
+      "kind": "direct"
+    },
+    "insurance": {
+      "value": "Pending — certificate not supplied",
+      "doc": "email",
+      "start": 708,
+      "end": 791,
+      "kind": "missing-document"
+    },
+    "license": {
+      "value": "Vendor reports applicable licenses current; documentation not verified",
+      "doc": "email",
+      "start": 617,
+      "end": 707,
+      "kind": "vendor-reported"
+    },
+    "reference": {
+      "value": "Juniper Planning Co. — reference available on request",
+      "doc": "email",
+      "start": 793,
+      "end": 862,
+      "kind": "source-summary"
+    },
+    "followup": {
+      "value": "Request current liability insurance certificate and coverage expiry",
+      "doc": "email",
+      "start": 708,
+      "end": 791,
+      "kind": "follow-up-draft"
+    }
+  }
+}

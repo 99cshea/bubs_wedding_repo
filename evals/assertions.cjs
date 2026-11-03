@@ -1,0 +1,1 @@
+const fixtures=require('./fixtures.json'); const grade=require('./grade.js'); module.exports=(output,context)=>grade(output,fixtures.cases.find(c=>c.id===context.vars.caseId),fixtures.keys,context.config.rule);

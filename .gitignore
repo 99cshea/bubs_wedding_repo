@@ -1,0 +1,7 @@
+node_modules/
+evals/results.json
+evals/.promptfoo/
+outputs/
+evals/run.log
+.env.local
+.voice-runtime/

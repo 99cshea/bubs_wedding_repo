@@ -1,0 +1,361 @@
+{
+  "type": "Venue",
+  "vendor": "Juniper Grove",
+  "oldPrice": "$7,500",
+  "documents": {
+    "website": {
+      "id": "website",
+      "title": "Vendor website snapshot",
+      "filename": "website.txt",
+      "text": "Juniper Grove\nABOUT & CONTACT - website snapshot\nCaptured November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nA sunlit Hill Country gathering place with ancient oaks, open skies, and room for up to 180 of your favorite people.\n\nOur booking contact is Casey Reed. Email events@junipergrove.example or call (512) 555-0166.\nOur studio address is 850 Creek Road, Dripping Springs, TX 78620. Our service territory is Dripping Springs, Texas.\nWe have been in business for 8 years.\nFind our site at https://junipergrove.example.\n\nPackages start at $7,500.\nPlease confirm the fulfillment deadline at booking.\n\nEditor note: this snapshot retains old pricing and timeline information, intentionally, for the onboarding exercise."
+    },
+    "call": {
+      "id": "call",
+      "title": "Introductory call transcript",
+      "filename": "intro-call-transcript.txt",
+      "text": "BUB'S VENDOR INTRODUCTION\nCall transcript | November 1, 2026, 10:00 a.m.\nRep: Jamie Rivera | Vendor: Casey Reed, Juniper Grove\nFICTIONAL SAMPLE SOURCE\n\n[00:00] Jamie: Tell me about what you do and who you are a good fit for.\n[00:19] Casey Reed: We offer Indoor and outdoor ceremonies, reception hall, getting-ready suites. Our style is Modern rustic; oak grove ceremony; indoor reception. Capacity-wise, 180 seated guests; 150 with indoor dance floor.\n\n[02:10] Jamie: Walk me through what's included and what you need.\n[02:22] Casey Reed: Standard service is 12-hour venue access. The team is One venue manager; client hires event coordinator. We can customize with Furniture layouts; ceremony locations; vendor selection. Exclusions are Catering, alcohol, rentals beyond listed furniture. From the venue or client, we need Licensed caterer; insured vendors; shuttle plan for offsite guests.\n\n[06:05] Jamie: How do bookings and payments work?\n[06:20] Casey Reed: The deposit is 30% non-refundable retainer. The balance is due 30 days before the event. We recommend booking 9–12 months ahead.\n[07:02] Jamie: And changes or cancellations?\n[07:14] Casey Reed: Retainer is non-refundable; within 30 days the full balance is due. For rescheduling: One date change within 12 months, subject to availability.\n\n[09:35] Jamie: What happens on the day?\n[09:46] Casey Reed: Vendor access from 10 a.m.; all collection by midnight. Our backup plan is Indoor ceremony option for up to 150 guests; generator hookup.\n[10:50] Jamie: What about delivery and deadlines?\n[11:02] Casey Reed: The deadline on the website is vague. I will send the actual planning or fulfillment deadline. I'll email you the latest timeline.\n\n[13:12] Jamie: Please also confirm the package prices and send insurance documentation.\n[13:25] Casey Reed: The website rates are out of date. I'll send our current rate card and a follow-up email. I still need to send our certificate.\n\n[14:00] Jamie: Thanks. We will keep the profile pending until the documents are reviewed."
+    },
+    "rates": {
+      "id": "rates",
+      "title": "2027 package rate card",
+      "filename": "rates.txt",
+      "text": "Juniper Grove\n2027 PACKAGE RATE CARD\nSent November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nEntry package name: The Grove\n\nEntry starting price: $8,500\n\nEntry package inclusions: Friday or Sunday; 12-hour access; tables and chairs\n\nSignature package name: The Celebration\n\nSignature starting price: $10,500\n\nSignature package inclusions: Saturday; 12-hour access; suites; tables and chairs\n\nPremium package name: The Weekend\n\nPremium starting price: $14,000\n\nPremium package inclusions: Friday setup; Saturday event; Sunday collection window\n\nOvertime / extra service rate: $500 / hour, subject to sound curfew\n\nTravel charges: First 50 miles included; $2 / mile beyond, round trip\n\nTax / additional fees: Sales tax added where applicable; no automatic gratuity\n\nAll quotes depend on scope and availability. This card supersedes the prior website rates."
+    },
+    "portfolio": {
+      "id": "portfolio",
+      "title": "Portfolio & listing brief",
+      "filename": "portfolio.txt",
+      "text": "Juniper Grove\nPORTFOLIO & LISTING BRIEF\nNovember 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nListing headline: Big skies. Your favorite people.\n\nPortfolio collections / links: junipergrove.example/portfolio; /collections/hill-country\n\nFeatured event description: 150-guest spring wedding with indoor rain-plan ceremony\n\nPortfolio permission / credit: Vendor grants listing display permission; credit the vendor by business name\n\nSearch tags: Venue, oak grove, indoor backup, Hill Country\n\nSuggested public bio:\nA sunlit Hill Country gathering place with ancient oaks, open skies, and room for up to 180 of your favorite people.\n\nThe rep may edit the public copy for clarity without adding unsupported claims."
+    },
+    "email": {
+      "id": "email",
+      "title": "Vendor follow-up email",
+      "filename": "vendor-follow-up.eml",
+      "text": "From: Casey Reed <events@junipergrove.example>\nTo: Jamie Rivera <jamie@bubs.example>\nDate: Mon, 02 Nov 2026 09:15:00 -0500\nSubject: Current pricing, timeline, and outstanding documents\nContent-Type: text/plain; charset=utf-8\n\nFICTIONAL SAMPLE EMAIL\n\nHi Jamie,\n\nThanks for the call yesterday. Please use $8,500 as our current entry starting price. The website's $7,500 rate is from last season; the attached 2027 rate card has the correct packages.\n\nOur confirmed delivery / planning timeline is: Final floor plan due 30 days before event. Please use this instead of the old or incomplete timeline discussed on the call.\n\nOur applicable licenses are current, but I have not supplied supporting documentation yet. I will send our insurance certificate separately; it is not attached to this email.\n\nJuniper Planning Co. can provide a professional reference on request.\n\nBest,\nCasey Reed\n\nAttachments: rate-card.txt\nInsurance certificate: not attached."
+    }
+  },
+  "fields": {
+    "name": {
+      "value": "Juniper Grove",
+      "doc": "website",
+      "start": 0,
+      "end": 13,
+      "kind": "direct"
+    },
+    "contact": {
+      "value": "Casey Reed",
+      "doc": "website",
+      "start": 243,
+      "end": 253,
+      "kind": "direct"
+    },
+    "email": {
+      "value": "events@junipergrove.example",
+      "doc": "website",
+      "start": 261,
+      "end": 288,
+      "kind": "direct"
+    },
+    "phone": {
+      "value": "(512) 555-0166",
+      "doc": "website",
+      "start": 297,
+      "end": 311,
+      "kind": "direct"
+    },
+    "address": {
+      "value": "850 Creek Road, Dripping Springs, TX 78620",
+      "doc": "website",
+      "start": 335,
+      "end": 377,
+      "kind": "direct"
+    },
+    "area": {
+      "value": "Dripping Springs, Texas",
+      "doc": "website",
+      "start": 404,
+      "end": 427,
+      "kind": "direct"
+    },
+    "years": {
+      "value": "8 years",
+      "doc": "website",
+      "start": 458,
+      "end": 465,
+      "kind": "direct"
+    },
+    "website": {
+      "value": "https://junipergrove.example",
+      "doc": "website",
+      "start": 484,
+      "end": 512,
+      "kind": "direct"
+    },
+    "services": {
+      "value": "Indoor and outdoor ceremonies, reception hall, getting-ready suites",
+      "doc": "call",
+      "start": 254,
+      "end": 321,
+      "kind": "direct"
+    },
+    "style": {
+      "value": "Modern rustic; oak grove ceremony; indoor reception",
+      "doc": "call",
+      "start": 336,
+      "end": 387,
+      "kind": "direct"
+    },
+    "capacity": {
+      "value": "180 seated guests; 150 with indoor dance floor",
+      "doc": "call",
+      "start": 404,
+      "end": 450,
+      "kind": "direct"
+    },
+    "coverage": {
+      "value": "12-hour venue access",
+      "doc": "call",
+      "start": 559,
+      "end": 579,
+      "kind": "direct"
+    },
+    "team": {
+      "value": "One venue manager; client hires event coordinator",
+      "doc": "call",
+      "start": 593,
+      "end": 642,
+      "kind": "direct"
+    },
+    "custom": {
+      "value": "Furniture layouts; ceremony locations; vendor selection",
+      "doc": "call",
+      "start": 666,
+      "end": 721,
+      "kind": "direct"
+    },
+    "exclusions": {
+      "value": "Catering, alcohol, rentals beyond listed furniture",
+      "doc": "call",
+      "start": 738,
+      "end": 788,
+      "kind": "direct"
+    },
+    "requirements": {
+      "value": "Licensed caterer; insured vendors; shuttle plan for offsite guests",
+      "doc": "call",
+      "start": 824,
+      "end": 890,
+      "kind": "direct"
+    },
+    "package1": {
+      "value": "The Grove",
+      "doc": "rates",
+      "start": 106,
+      "end": 115,
+      "kind": "direct"
+    },
+    "price": {
+      "value": "$8,500",
+      "doc": "email",
+      "start": 303,
+      "end": 309,
+      "kind": "direct"
+    },
+    "includes1": {
+      "value": "Friday or Sunday; 12-hour access; tables and chairs",
+      "doc": "rates",
+      "start": 173,
+      "end": 224,
+      "kind": "direct"
+    },
+    "package2": {
+      "value": "The Celebration",
+      "doc": "rates",
+      "start": 250,
+      "end": 265,
+      "kind": "direct"
+    },
+    "price2": {
+      "value": "$10,500",
+      "doc": "rates",
+      "start": 293,
+      "end": 300,
+      "kind": "direct"
+    },
+    "includes2": {
+      "value": "Saturday; 12-hour access; suites; tables and chairs",
+      "doc": "rates",
+      "start": 332,
+      "end": 383,
+      "kind": "direct"
+    },
+    "package3": {
+      "value": "The Weekend",
+      "doc": "rates",
+      "start": 407,
+      "end": 418,
+      "kind": "direct"
+    },
+    "price3": {
+      "value": "$14,000",
+      "doc": "rates",
+      "start": 444,
+      "end": 451,
+      "kind": "direct"
+    },
+    "includes3": {
+      "value": "Friday setup; Saturday event; Sunday collection window",
+      "doc": "rates",
+      "start": 481,
+      "end": 535,
+      "kind": "direct"
+    },
+    "overtime": {
+      "value": "$500 / hour, subject to sound curfew",
+      "doc": "rates",
+      "start": 568,
+      "end": 604,
+      "kind": "direct"
+    },
+    "travel": {
+      "value": "First 50 miles included; $2 / mile beyond, round trip",
+      "doc": "rates",
+      "start": 622,
+      "end": 675,
+      "kind": "direct"
+    },
+    "tax": {
+      "value": "Sales tax added where applicable; no automatic gratuity",
+      "doc": "rates",
+      "start": 700,
+      "end": 755,
+      "kind": "direct"
+    },
+    "deposit": {
+      "value": "30% non-refundable retainer",
+      "doc": "call",
+      "start": 978,
+      "end": 1005,
+      "kind": "direct"
+    },
+    "balance": {
+      "value": "30 days before the event",
+      "doc": "call",
+      "start": 1026,
+      "end": 1050,
+      "kind": "direct"
+    },
+    "lead": {
+      "value": "9–12 months",
+      "doc": "call",
+      "start": 1073,
+      "end": 1084,
+      "kind": "direct"
+    },
+    "setup": {
+      "value": "Vendor access from 10 a.m.; all collection by midnight",
+      "doc": "call",
+      "start": 1363,
+      "end": 1417,
+      "kind": "direct"
+    },
+    "delivery": {
+      "value": "Final floor plan due 30 days before event",
+      "doc": "email",
+      "start": 496,
+      "end": 537,
+      "kind": "direct"
+    },
+    "cancellation": {
+      "value": "Retainer is non-refundable; within 30 days the full balance is due",
+      "doc": "call",
+      "start": 1157,
+      "end": 1223,
+      "kind": "direct"
+    },
+    "reschedule": {
+      "value": "One date change within 12 months, subject to availability",
+      "doc": "call",
+      "start": 1243,
+      "end": 1300,
+      "kind": "direct"
+    },
+    "backup": {
+      "value": "Indoor ceremony option for up to 150 guests; generator hookup",
+      "doc": "call",
+      "start": 1438,
+      "end": 1499,
+      "kind": "direct"
+    },
+    "bio": {
+      "value": "A sunlit Hill Country gathering place with ancient oaks, open skies, and room for up to 180 of your favorite people.",
+      "doc": "portfolio",
+      "start": 502,
+      "end": 618,
+      "kind": "direct"
+    },
+    "headline": {
+      "value": "Big skies. Your favorite people.",
+      "doc": "portfolio",
+      "start": 102,
+      "end": 134,
+      "kind": "direct"
+    },
+    "gallery": {
+      "value": "junipergrove.example/portfolio; /collections/hill-country",
+      "doc": "portfolio",
+      "start": 167,
+      "end": 224,
+      "kind": "direct"
+    },
+    "featured": {
+      "value": "150-guest spring wedding with indoor rain-plan ceremony",
+      "doc": "portfolio",
+      "start": 254,
+      "end": 309,
+      "kind": "direct"
+    },
+    "credit": {
+      "value": "Vendor grants listing display permission; credit the vendor by business name",
+      "doc": "portfolio",
+      "start": 342,
+      "end": 418,
+      "kind": "direct"
+    },
+    "tags": {
+      "value": "Venue, oak grove, indoor backup, Hill Country",
+      "doc": "portfolio",
+      "start": 433,
+      "end": 478,
+      "kind": "direct"
+    },
+    "insurance": {
+      "value": "Pending — certificate not supplied",
+      "doc": "email",
+      "start": 712,
+      "end": 795,
+      "kind": "missing-document"
+    },
+    "license": {
+      "value": "Vendor reports applicable licenses current; documentation not verified",
+      "doc": "email",
+      "start": 621,
+      "end": 711,
+      "kind": "vendor-reported"
+    },
+    "reference": {
+      "value": "Juniper Planning Co. — reference available on request",
+      "doc": "email",
+      "start": 797,
+      "end": 866,
+      "kind": "source-summary"
+    },
+    "followup": {
+      "value": "Request current liability insurance certificate and coverage expiry",
+      "doc": "email",
+      "start": 712,
+      "end": 795,
+      "kind": "follow-up-draft"
+    }
+  }
+}

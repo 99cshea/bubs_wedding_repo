@@ -1,0 +1,361 @@
+{
+  "type": "Photographer",
+  "vendor": "Golden Hour Photography",
+  "oldPrice": "$3,800",
+  "documents": {
+    "website": {
+      "id": "website",
+      "title": "Vendor website snapshot",
+      "filename": "website.txt",
+      "text": "Golden Hour Photography\nABOUT & CONTACT - website snapshot\nCaptured November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nHeartfelt imagery for the wildly in love. Golden Hour captures candid moments and warm, true-to-life portraits for celebrations across Austin and the Texas Hill Country.\n\nOur booking contact is Alex Morgan. Email hello@goldenhour.example or call (512) 555-0142.\nOur studio address is 1200 East 6th Street, Austin, TX 78702. Our service territory is Austin + Texas Hill Country.\nWe have been in business for 8 years.\nFind our site at https://goldenhourphotography.example.\n\nPackages start at $3,800.\nOur full galleries are delivered in 6 weeks.\n\nEditor note: this snapshot retains old pricing and timeline information, intentionally, for the onboarding exercise."
+    },
+    "call": {
+      "id": "call",
+      "title": "Introductory call transcript",
+      "filename": "intro-call-transcript.txt",
+      "text": "BUB'S VENDOR INTRODUCTION\nCall transcript | November 1, 2026, 10:00 a.m.\nRep: Jamie Rivera | Vendor: Alex Morgan, Golden Hour Photography\nFICTIONAL SAMPLE SOURCE\n\n[00:00] Jamie: Tell me about what you do and who you are a good fit for.\n[00:19] Alex Morgan: We offer Wedding photography, engagement sessions, second photographer. Our style is Candid documentary; warm, true-to-life portraits. Capacity-wise, One wedding per team per day; two teams maximum.\n\n[02:10] Jamie: Walk me through what's included and what you need.\n[02:22] Alex Morgan: Standard service is 8 hours. The team is Lead photographer + second photographer. We can customize with Extra coverage, albums, engagement sessions. Exclusions are Raw files, videography, and print products. From the venue or client, we need Family photo list; access to getting-ready rooms.\n\n[06:05] Jamie: How do bookings and payments work?\n[06:20] Alex Morgan: The deposit is 30% non-refundable retainer. The balance is due 30 days before the event. We recommend booking 9–12 months ahead.\n[07:02] Jamie: And changes or cancellations?\n[07:14] Alex Morgan: Retainer is non-refundable; within 30 days the full balance is due. For rescheduling: One date change within 12 months, subject to availability.\n\n[09:35] Jamie: What happens on the day?\n[09:46] Alex Morgan: Arrive 45 minutes before coverage starts. Our backup plan is Two camera bodies per photographer; dual-card recording; backup associate.\n[10:50] Jamie: What about delivery and deadlines?\n[11:02] Alex Morgan: The website says six weeks for the gallery. I need to confirm our current standard. I'll email you the latest timeline.\n\n[13:12] Jamie: Please also confirm the package prices and send insurance documentation.\n[13:25] Alex Morgan: The website rates are out of date. I'll send our current rate card and a follow-up email. I still need to send our certificate.\n\n[14:00] Jamie: Thanks. We will keep the profile pending until the documents are reviewed."
+    },
+    "rates": {
+      "id": "rates",
+      "title": "2027 package rate card",
+      "filename": "rates.txt",
+      "text": "Golden Hour Photography\n2027 PACKAGE RATE CARD\nSent November 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nEntry package name: The Keepsake\n\nEntry starting price: $4,200\n\nEntry package inclusions: 8 hours; two photographers; online gallery; 600+ edited images\n\nSignature package name: The Full Story\n\nSignature starting price: $5,800\n\nSignature package inclusions: 10 hours; two photographers; engagement session; 800+ images\n\nPremium package name: The Heirloom\n\nPremium starting price: $7,200\n\nPremium package inclusions: 12 hours; engagement session; 10-inch album; 1,000+ images\n\nOvertime / extra service rate: $350 / hour\n\nTravel charges: First 50 miles included; $2 / mile beyond, round trip\n\nTax / additional fees: Sales tax added where applicable; no automatic gratuity\n\nAll quotes depend on scope and availability. This card supersedes the prior website rates."
+    },
+    "portfolio": {
+      "id": "portfolio",
+      "title": "Portfolio & listing brief",
+      "filename": "portfolio.txt",
+      "text": "Golden Hour Photography\nPORTFOLIO & LISTING BRIEF\nNovember 2, 2026 | FICTIONAL SAMPLE SOURCE\n\nListing headline: The fleeting moments. Kept forever.\n\nPortfolio collections / links: goldenhourphotography.example/portfolio; /collections/hill-country\n\nFeatured event description: 120-guest outdoor ceremony at Juniper Grove; sunset portraits\n\nPortfolio permission / credit: Vendor grants listing display permission; credit the vendor by business name\n\nSearch tags: Documentary, candid, Hill Country, warm color\n\nSuggested public bio:\nHeartfelt imagery for the wildly in love. Golden Hour captures candid moments and warm, true-to-life portraits for celebrations across Austin and the Texas Hill Country.\n\nThe rep may edit the public copy for clarity without adding unsupported claims."
+    },
+    "email": {
+      "id": "email",
+      "title": "Vendor follow-up email",
+      "filename": "vendor-follow-up.eml",
+      "text": "From: Alex Morgan <hello@goldenhour.example>\nTo: Jamie Rivera <jamie@bubs.example>\nDate: Mon, 02 Nov 2026 09:15:00 -0500\nSubject: Current pricing, timeline, and outstanding documents\nContent-Type: text/plain; charset=utf-8\n\nFICTIONAL SAMPLE EMAIL\n\nHi Jamie,\n\nThanks for the call yesterday. Please use $4,200 as our current entry starting price. The website's $3,800 rate is from last season; the attached 2027 rate card has the correct packages.\n\nOur confirmed delivery / planning timeline is: Sneak peeks in 72 hours; full gallery in 8 weeks. Please use this instead of the old or incomplete timeline discussed on the call.\n\nOur applicable licenses are current, but I have not supplied supporting documentation yet. I will send our insurance certificate separately; it is not attached to this email.\n\nJuniper Planning Co. can provide a professional reference on request.\n\nBest,\nAlex Morgan\n\nAttachments: rate-card.txt\nInsurance certificate: not attached."
+    }
+  },
+  "fields": {
+    "name": {
+      "value": "Golden Hour Photography",
+      "doc": "website",
+      "start": 0,
+      "end": 23,
+      "kind": "direct"
+    },
+    "contact": {
+      "value": "Alex Morgan",
+      "doc": "website",
+      "start": 306,
+      "end": 317,
+      "kind": "direct"
+    },
+    "email": {
+      "value": "hello@goldenhour.example",
+      "doc": "website",
+      "start": 325,
+      "end": 349,
+      "kind": "direct"
+    },
+    "phone": {
+      "value": "(512) 555-0142",
+      "doc": "website",
+      "start": 358,
+      "end": 372,
+      "kind": "direct"
+    },
+    "address": {
+      "value": "1200 East 6th Street, Austin, TX 78702",
+      "doc": "website",
+      "start": 396,
+      "end": 434,
+      "kind": "direct"
+    },
+    "area": {
+      "value": "Austin + Texas Hill Country",
+      "doc": "website",
+      "start": 461,
+      "end": 488,
+      "kind": "direct"
+    },
+    "years": {
+      "value": "8 years",
+      "doc": "website",
+      "start": 519,
+      "end": 526,
+      "kind": "direct"
+    },
+    "website": {
+      "value": "https://goldenhourphotography.example",
+      "doc": "website",
+      "start": 545,
+      "end": 582,
+      "kind": "direct"
+    },
+    "services": {
+      "value": "Wedding photography, engagement sessions, second photographer",
+      "doc": "call",
+      "start": 266,
+      "end": 327,
+      "kind": "direct"
+    },
+    "style": {
+      "value": "Candid documentary; warm, true-to-life portraits",
+      "doc": "call",
+      "start": 342,
+      "end": 390,
+      "kind": "direct"
+    },
+    "capacity": {
+      "value": "One wedding per team per day; two teams maximum",
+      "doc": "call",
+      "start": 407,
+      "end": 454,
+      "kind": "direct"
+    },
+    "coverage": {
+      "value": "8 hours",
+      "doc": "call",
+      "start": 564,
+      "end": 571,
+      "kind": "direct"
+    },
+    "team": {
+      "value": "Lead photographer + second photographer",
+      "doc": "call",
+      "start": 585,
+      "end": 624,
+      "kind": "direct"
+    },
+    "custom": {
+      "value": "Extra coverage, albums, engagement sessions",
+      "doc": "call",
+      "start": 648,
+      "end": 691,
+      "kind": "direct"
+    },
+    "exclusions": {
+      "value": "Raw files, videography, and print products",
+      "doc": "call",
+      "start": 708,
+      "end": 750,
+      "kind": "direct"
+    },
+    "requirements": {
+      "value": "Family photo list; access to getting-ready rooms",
+      "doc": "call",
+      "start": 786,
+      "end": 834,
+      "kind": "direct"
+    },
+    "package1": {
+      "value": "The Keepsake",
+      "doc": "rates",
+      "start": 116,
+      "end": 128,
+      "kind": "direct"
+    },
+    "price": {
+      "value": "$4,200",
+      "doc": "email",
+      "start": 301,
+      "end": 307,
+      "kind": "direct"
+    },
+    "includes1": {
+      "value": "8 hours; two photographers; online gallery; 600+ edited images",
+      "doc": "rates",
+      "start": 186,
+      "end": 248,
+      "kind": "direct"
+    },
+    "package2": {
+      "value": "The Full Story",
+      "doc": "rates",
+      "start": 274,
+      "end": 288,
+      "kind": "direct"
+    },
+    "price2": {
+      "value": "$5,800",
+      "doc": "rates",
+      "start": 316,
+      "end": 322,
+      "kind": "direct"
+    },
+    "includes2": {
+      "value": "10 hours; two photographers; engagement session; 800+ images",
+      "doc": "rates",
+      "start": 354,
+      "end": 414,
+      "kind": "direct"
+    },
+    "package3": {
+      "value": "The Heirloom",
+      "doc": "rates",
+      "start": 438,
+      "end": 450,
+      "kind": "direct"
+    },
+    "price3": {
+      "value": "$7,200",
+      "doc": "rates",
+      "start": 476,
+      "end": 482,
+      "kind": "direct"
+    },
+    "includes3": {
+      "value": "12 hours; engagement session; 10-inch album; 1,000+ images",
+      "doc": "rates",
+      "start": 512,
+      "end": 570,
+      "kind": "direct"
+    },
+    "overtime": {
+      "value": "$350 / hour",
+      "doc": "rates",
+      "start": 603,
+      "end": 614,
+      "kind": "direct"
+    },
+    "travel": {
+      "value": "First 50 miles included; $2 / mile beyond, round trip",
+      "doc": "rates",
+      "start": 632,
+      "end": 685,
+      "kind": "direct"
+    },
+    "tax": {
+      "value": "Sales tax added where applicable; no automatic gratuity",
+      "doc": "rates",
+      "start": 710,
+      "end": 765,
+      "kind": "direct"
+    },
+    "deposit": {
+      "value": "30% non-refundable retainer",
+      "doc": "call",
+      "start": 923,
+      "end": 950,
+      "kind": "direct"
+    },
+    "balance": {
+      "value": "30 days before the event",
+      "doc": "call",
+      "start": 971,
+      "end": 995,
+      "kind": "direct"
+    },
+    "lead": {
+      "value": "9–12 months",
+      "doc": "call",
+      "start": 1018,
+      "end": 1029,
+      "kind": "direct"
+    },
+    "setup": {
+      "value": "Arrive 45 minutes before coverage starts",
+      "doc": "call",
+      "start": 1310,
+      "end": 1350,
+      "kind": "direct"
+    },
+    "delivery": {
+      "value": "Sneak peeks in 72 hours; full gallery in 8 weeks",
+      "doc": "email",
+      "start": 494,
+      "end": 542,
+      "kind": "direct"
+    },
+    "cancellation": {
+      "value": "Retainer is non-refundable; within 30 days the full balance is due",
+      "doc": "call",
+      "start": 1103,
+      "end": 1169,
+      "kind": "direct"
+    },
+    "reschedule": {
+      "value": "One date change within 12 months, subject to availability",
+      "doc": "call",
+      "start": 1189,
+      "end": 1246,
+      "kind": "direct"
+    },
+    "backup": {
+      "value": "Two camera bodies per photographer; dual-card recording; backup associate",
+      "doc": "call",
+      "start": 1371,
+      "end": 1444,
+      "kind": "direct"
+    },
+    "bio": {
+      "value": "Heartfelt imagery for the wildly in love. Golden Hour captures candid moments and warm, true-to-life portraits for celebrations across Austin and the Texas Hill Country.",
+      "doc": "portfolio",
+      "start": 530,
+      "end": 699,
+      "kind": "direct"
+    },
+    "headline": {
+      "value": "The fleeting moments. Kept forever.",
+      "doc": "portfolio",
+      "start": 112,
+      "end": 147,
+      "kind": "direct"
+    },
+    "gallery": {
+      "value": "goldenhourphotography.example/portfolio; /collections/hill-country",
+      "doc": "portfolio",
+      "start": 180,
+      "end": 246,
+      "kind": "direct"
+    },
+    "featured": {
+      "value": "120-guest outdoor ceremony at Juniper Grove; sunset portraits",
+      "doc": "portfolio",
+      "start": 276,
+      "end": 337,
+      "kind": "direct"
+    },
+    "credit": {
+      "value": "Vendor grants listing display permission; credit the vendor by business name",
+      "doc": "portfolio",
+      "start": 370,
+      "end": 446,
+      "kind": "direct"
+    },
+    "tags": {
+      "value": "Documentary, candid, Hill Country, warm color",
+      "doc": "portfolio",
+      "start": 461,
+      "end": 506,
+      "kind": "direct"
+    },
+    "insurance": {
+      "value": "Pending — certificate not supplied",
+      "doc": "email",
+      "start": 717,
+      "end": 800,
+      "kind": "missing-document"
+    },
+    "license": {
+      "value": "Vendor reports applicable licenses current; documentation not verified",
+      "doc": "email",
+      "start": 626,
+      "end": 716,
+      "kind": "vendor-reported"
+    },
+    "reference": {
+      "value": "Juniper Planning Co. — reference available on request",
+      "doc": "email",
+      "start": 802,
+      "end": 871,
+      "kind": "source-summary"
+    },
+    "followup": {
+      "value": "Request current liability insurance certificate and coverage expiry",
+      "doc": "email",
+      "start": 717,
+      "end": 800,
+      "kind": "follow-up-draft"
+    }
+  }
+}
