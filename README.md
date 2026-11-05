@@ -26,3 +26,13 @@ Run `node voice/gateway.mjs` with a recent Node release, or use `start-voice-pil
 The fixture-based promptfoo suite lives in `evals/` (`npm ci`, then `npm run eval`). `node voice/gateway.test.mjs` runs local gateway tests without API charges.
 
 API keys, local usage counters, and dependencies are excluded from source control. All sample businesses, documents, and prices are fictional.
+
+## Expanded vendor intake (v11)
+
+The vendor flow now restores the original 46-field onboarding schema and adds eight category-specific operating questions plus four insurance record fields: 58 answers across six substantive sections. Manual and assisted paths have the same requirements. Blank manual intake resets the draft explicitly, preserving any published listing.
+
+Business contacts, service scope, three package tiers, inclusions, overtime, fees, booking/payment/cancellation policies, contingency plans, portfolio permissions, and document follow-up all require answers. Not-applicable or unavailable details must be explained explicitly. Every section needs vendor confirmation; changing a field invalidates that section’s confirmation. Pricing and delivery have separate confirmation gates.
+
+The simulated assisted import uses the existing five-document packet JSON and its exact text spans, drafting 42 fields and leaving 16 unsupported fields blank. Price and timeline discrepancies remain unresolved until reviewed. No measured or assumed time saving is claimed. The UI shows actual field coverage and remaining requirements. Pending insurance does not imply verification and requires status/follow-up details. Private contacts, address, references, and insurance are excluded from new published snapshots and listing exports.
+
+Run `node tools/vendor-depth.test.mjs` for all-category field counts, same completion standard, sample coverage, withheld answers, source spans, confirmation gates, and privacy checks. Browser QA checked a truly blank manual worksheet, blocked incomplete progression, source viewing without autofill, sample loading, 42/58 prefill, and category-specific gaps. Existing v10 drafts retain their values and need to complete the expanded intake before republishing.
