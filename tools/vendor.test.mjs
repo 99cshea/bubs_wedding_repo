@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const nodes=new Map();const node=selector=>{if(!nodes.has(selector))nodes.set(selector,{innerHTML:'',addEventListener(){},contentWindow:{postMessage(){}},classList:{add(){}}});return nodes.get(selector)};
+const context=vm.createContext({document:{querySelector:node,querySelectorAll:()=>[]},localStorage:{getItem:()=>null,setItem(){}},window:{addEventListener(){},scrollTo(){}},location:{hash:'',origin:'http://localhost'},URL,Blob,setTimeout(){},console});
+vm.runInContext(fs.readFileSync('dist/vendor.js','utf8'),context);
+const run=code=>vm.runInContext(code,context);
+assert.equal(run('required().length'),6);
+assert.match(run('errorsFor(1)'),/booking email/);
+run("v.data={...categories.Photographer,email:'bad-email'}");assert.match(run('errorsFor(1)'),/valid public booking email/);
+run("v.data.email='hello@goldenhour.example'");assert.equal(run('errorsFor(1)'),'');assert.match(run('errorsFor(2)'),/Confirm/);
+run('v.confirmedPrice=true');assert.equal(run('errorsFor(2)'),'');assert.match(run('errorsFor(3)'),/authorized/);
+assert.equal(run("validUrl('javascript:alert(1)')"),false);assert.equal(run("validUrl('https://example.com')"),true);
+run("v.insuranceName='PRIVATE_CERT.pdf';v.data.insurance='PRIVATE_INSURANCE_RECORD';v.data.bio='<script>attack</script>'");
+const html=run('listing(v.data,"",true)');assert(!html.includes('PRIVATE_CERT'));assert(!html.includes('PRIVATE_INSURANCE_RECORD'));assert(!html.includes('<script>attack'));assert(html.includes('&lt;script&gt;attack'));
+run("v.published={type:'Venue',sample:true,data:{...categories.Venue},photo:''};v.type='Caterer';v.data.name='Unpublished edit'");
+const published=run('published()');assert(published.includes('Juniper Grove'));assert(!published.includes('Unpublished edit'));assert(published.includes('seated guest capacity'));assert(!published.includes('dietary requirements'));
+console.log('PASS: required fields, email and URL validation, pricing confirmation, publish authorization, public/private separation, HTML escaping, and published snapshot isolation.');

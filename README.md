@@ -1,38 +1,28 @@
-# Bub’s Real Good Weddings & BBQ Inc.
+# Bub’s vendor onboarding demo
 
-Vendor onboarding demo, saved November 2, 2026. Source snapshot: `7880c9f0fb131186368e27b249a310da7224e527` from the existing Sites checkout. GitHub repository: https://github.com/99cshea/bubs_wedding_repo. This snapshot preserves the current application source and handoff notes.
+The main experience is now vendor self-service: choose a business category, start from a sample website or blank draft, review business information, confirm services and pricing, add a cover and optional private insurance document, preview, and publish a finished demo listing.
 
-## Work completed
+## Open and run
 
-- Before/after onboarding for photographers, DJs, venues, and caterers: a manual 46-field workflow and simulated automated profile creation.
-- Editable rep rate, process comparison, fictional source packets, email and call transcripts, exact source citations, and a downloadable sample insurance certificate.
-- Wedding-oriented editorial styling, improved text contrast, reduced sidebar marketing copy, and staged loading screens.
-- Transcript-to-profile flow, vendor draft review, and browser-based vendor directory.
-- Promptfoo comparison of three profile strategies across seven transcript scenarios, including incomplete information. Published reports include 126 assertion results. These evaluate fixture outputs, not live model generations.
-- Real GPT Live voice pilot with a local Node gateway, GPT-6 Luna profile analysis, captions, typed-input option, exact supporting quotes, explicit Apply/Dismiss controls, and draft/transcript export.
+Existing private Site: https://bubs-vendor-onboarding-demo.safeamber12.chatgpt.site/?v=10
 
-## Run locally
+Run `node voice/gateway.mjs` with a recent Node release, or use `start-voice-pilot.cmd` on the original development computer. Open http://127.0.0.1:4180/?v=10. Voice needs the existing ignored `.env.local` configuration and local gateway. The static flow can be served from `dist/` with any static HTTP server.
 
-Use a recent Node.js release with built-in fetch and environment proxy support. Run `node voice/gateway.mjs`, then open http://127.0.0.1:4180/?v=9#voice. The Windows launcher uses the runtime path on the original development computer; update it if moving the repo.
+## Current behavior
 
-For live API features, configure `OPENAI_API_KEY` in this repository’s ignored `.env.local` file. No credential is included in this snapshot. The original checkout still holds its existing local configuration. Do not put the key in `dist/`, source control, or client-side code.
+- Four categories: photographer, DJ, venue, caterer; category-specific service questions.
+- Website imports remain simulated. The sample source packets deliberately include outdated pricing and no confirmed booking email. Field notes link to the actual fictional packet.
+- A blank entry path accepts the vendor’s own information. Required fields, contact email, website protocol, current-price confirmation, authorization, and final review are checked before publishing.
+- Draft and published listing are separate browser-local snapshots. Editing a draft leaves the previously published listing intact until republished. Drafts survive refresh; Save & exit provides a resumable handoff.
+- Optional cover photo is compressed and saved locally. Insurance files stay in memory for the current page session; only the filename persists. Insurance never appears in the public listing, and upload does not verify coverage.
+- The embedded vendor voice assistant receives the visible draft, suggests changes for review, and returns only explicitly applied fields. Existing pilot limits and local-key handling are retained. Closing the assistant ends its session.
+- Publish produces a finished couple-facing demo page. It does not create an internet-public listing or shared database record. Inquiry actions are simulated and send no messages.
+- The original rep workflow, comparison, and promptfoo evals remain at `team-demo.html` as a separate presentation tool.
 
-The static demo can also be served from `dist/` with any static HTTP server; voice requires the gateway. Only one gateway can bind port 4180 at a time.
+## Verification
 
-## Pilot limits and validation
+`node tools/vendor.test.mjs` verifies required-field checks, email/URL handling, pricing/authorization checks, public/private separation, escaping, and published snapshot isolation. Browser checks covered sample import/loading, missing email, pricing correction, preview/publish, draft persistence, unchanged published state while editing, reload of the finished page, and embedded voice context handoff. No new paid model call or microphone recording was used for this redesign; the prior live voice integration tests remain documented in `voice/README.md`.
 
-One active voice session; two-minute server cutoff; thirty-second browser idle cutoff; ten starts per UTC day; three bounded profile analyses per session. Connection tests count toward daily starts. These are application limits, not an account dollar spending cap. End sessions before stopping the gateway.
+The fixture-based promptfoo suite lives in `evals/` (`npm ci`, then `npm run eval`). `node voice/gateway.test.mjs` runs local gateway tests without API charges.
 
-Validated gateway authorization, origin restrictions, budgets, persisted start limits, grounding, secret-file exclusion, and server cutoff with `node voice/gateway.test.mjs`. A real API test verified spoken replies, grounded suggestions from typed rep notes, withheld missing email, explicit application, and shutdown. Physical microphone input has not been tested. Hosted-page access to the local gateway remained unverified; the local browser flow worked.
-
-## Layout
-
-- `dist/`: complete static application, sample evidence, certificate, and published eval assets.
-- `voice/`: gateway implementation, tests, API smoke test, and operating notes.
-- `evals/`: reproducible promptfoo fixture suite (`npm ci`, then `npm run eval` from this directory).
-- `tools/`: sample packet/certificate generation and model-access check.
-- `.openai/hosting.json`: existing Sites project binding; preserve unless intentionally creating a separate deployment.
-
-Existing private deployment: https://bubs-vendor-onboarding-demo.safeamber12.chatgpt.site/?v=9#voice
-
-The non-voice automation and vendor documents are fictional demo data. Profile changes stay in the browser; no CRM integration or insurance verification is implemented.
+API keys, local usage counters, and dependencies are excluded from source control. All sample businesses, documents, and prices are fictional.
