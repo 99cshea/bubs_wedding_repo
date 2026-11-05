@@ -4,6 +4,7 @@ import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {randomBytes} from 'node:crypto';
 import {createRequire} from 'node:module';
+import {retrieveSite,importSchema,importInstructions,groundImport,importLimits} from './site-import.mjs';
 const contract=createRequire(import.meta.url)('../dist/vendor-contract.js');
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const fields=contract.keys;
@@ -17,11 +18,11 @@ export function groundSuggestions(result,transcript,category){if(!result||typeof
 export function schemaForCategory(category){const output=JSON.parse(JSON.stringify(schema));output.properties.updates.items.properties.field.enum=category?contract.keysForCategory(category):fields;return output}
 export function profileContext(value,category,focus=[]){const valid=category?contract.keysForCategory(category):fields;const accepted=new Set(valid);const focused=Array.isArray(focus)?focus.filter(key=>accepted.has(key)).slice(0,8):[];const cleaned=cleanProfile(value),profile={};let size=0;for(const key of [...new Set([...focused,...valid])]){if(!cleaned[key])continue;const text=cleaned[key].slice(0,focused.includes(key)?500:140);if(size+text.length>8500)continue;profile[key]=text;size+=text.length}return {category:category||'Wedding vendor',focus:focused,profile,missingFields:valid.filter(key=>!cleaned[key])}}
 
-export function createGateway({apiKey,upstream=fetch,port=4180,runtime=path.join(root,'.voice-runtime'),sessionSeconds=limits.sessionSeconds}={}){
- fs.mkdirSync(runtime,{recursive:true});const ledgerFile=path.join(runtime,'usage.json');let usage={day:new Date().toISOString().slice(0,10),starts:0};try{const stored=JSON.parse(fs.readFileSync(ledgerFile,'utf8'));if(stored.day===usage.day&&Number.isInteger(stored.starts))usage=stored;}catch{}
- let active=null,creating=false;const clients=new Map();
- function ledger(){const day=new Date().toISOString().slice(0,10);if(usage.day!==day)usage={day,starts:0};return usage;}
- async function api(route,body,method='POST'){const response=await upstream('https://api.openai.com/v1/'+route,{method,headers:{Authorization:'Bearer '+apiKey,'Content-Type':'application/json'},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(20000)});if(!response.ok){let data={};try{data=await response.json()}catch{}const error=Error('OpenAI request failed');error.status=response.status;error.apiCode=data.error?.code;throw error;}if(response.status===204)return{};const responseText=await response.text();return responseText?JSON.parse(responseText):{};}
+export function createGateway({apiKey,upstream=fetch,port=4180,runtime=path.join(root,'.voice-runtime'),sessionSeconds=limits.sessionSeconds,siteFetch=fetch,siteResolve}={}){
+ fs.mkdirSync(runtime,{recursive:true});const ledgerFile=path.join(runtime,'usage.json');let usage={day:new Date().toISOString().slice(0,10),starts:0,imports:0};try{const stored=JSON.parse(fs.readFileSync(ledgerFile,'utf8'));if(stored.day===usage.day&&Number.isInteger(stored.starts))usage={...stored,imports:Number.isInteger(stored.imports)?stored.imports:0};}catch{}
+ let active=null,creating=false,importing=false;const clients=new Map(),importCache=new Map();
+ function ledger(){const day=new Date().toISOString().slice(0,10);if(usage.day!==day)usage={day,starts:0,imports:0};return usage;}
+ async function api(route,body,method='POST',timeout=20000){const response=await upstream('https://api.openai.com/v1/'+route,{method,headers:{Authorization:'Bearer '+apiKey,'Content-Type':'application/json'},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(timeout)});if(!response.ok){let data={};try{data=await response.json()}catch{}const error=Error('OpenAI request failed');error.status=response.status;error.apiCode=data.error?.code;throw error;}if(response.status===204)return{};const responseText=await response.text();return responseText?JSON.parse(responseText):{};}
  async function hangup(session){if(!session||session.closing)return;session.closing=true;clearTimeout(session.timer);try{await api('live/sessions/'+encodeURIComponent(session.id)+'/hangup',undefined);}catch(error){if(![404,409].includes(error.status)){session.closeUnconfirmed=true;session.closing=false;session.timer=setTimeout(()=>hangup(session),2000);return;}}if(active===session)active=null;}
  function response(res,status,value,origin){const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Vary':'Origin'};if(origin)headers['Access-Control-Allow-Origin']=origin;res.writeHead(status,headers);res.end(JSON.stringify(value));}
  const server=http.createServer(async(req,res)=>{const own='http://127.0.0.1:'+port;const origin=req.headers.origin||((req.headers['sec-fetch-site']==='same-origin'&&req.headers.host==='127.0.0.1:'+port)?own:undefined);const origins=new Set([allowedOrigin,own,'http://localhost:'+port]);const url=new URL(req.url,own);const apiRoute=url.pathname.startsWith('/api/voice/');
@@ -29,13 +30,28 @@ export function createGateway({apiKey,upstream=fetch,port=4180,runtime=path.join
   // Exact origin checks also protect the loopback endpoint from unrelated websites.
   if(!origins.has(origin)){response(res,403,{error:'This origin is not allowed to use the local voice gateway.'});return;}
   if(req.method==='OPTIONS'){res.writeHead(204,{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET,POST,OPTIONS','Access-Control-Allow-Headers':'Content-Type,Authorization','Access-Control-Allow-Private-Network':'true','Vary':'Origin','Access-Control-Max-Age':'600'});res.end();return;}
-  if(url.pathname==='/api/voice/status'&&req.method==='GET'){response(res,200,{ready:!!apiKey,fieldContractVersion:12,liveModel:'gpt-live-1',backendModel:'gpt-6-luna',limits,startsToday:ledger().starts,active:!!active||creating},origin);return;}
+  if(url.pathname==='/api/voice/status'&&req.method==='GET'){response(res,200,{ready:!!apiKey,fieldContractVersion:12,liveModel:'gpt-live-1',backendModel:'gpt-6-luna',limits,startsToday:ledger().starts,active:!!active||creating,importReady:true,importActive:importing,importLimits,importsToday:ledger().imports},origin);return;}
   if(req.method!=='POST'||!req.headers['content-type']?.startsWith('application/json')){response(res,405,{error:'JSON POST required.'},origin);return;}
   let body;try{let input='';for await(const chunk of req){input+=chunk;if(Buffer.byteLength(input)>96000){response(res,413,{error:'Request too large.'},origin);return}}body=JSON.parse(input);}catch{response(res,400,{error:'Invalid JSON.'},origin);return}
   if(url.pathname==='/api/voice/connect'){for(const [key,client]of clients)if(client.expires<Date.now())clients.delete(key);const token=randomBytes(24).toString('hex');clients.set(token,{origin,expires:Date.now()+15*60000});response(res,200,{token},origin);return;}
   const token=req.headers.authorization?.replace(/^Bearer /,'');const client=clients.get(token);if(!client||client.origin!==origin||client.expires<Date.now()){response(res,401,{error:'Connect to the local gateway again.'},origin);return;}
   if(!apiKey){response(res,503,{error:'The local API key is not configured.'},origin);return;}
   try{
+   if(url.pathname==='/api/voice/import'){
+    if(!contract.categories[body.category]||typeof body.url!=='string'||body.url.length>2000||typeof body.requestId!=='string'||body.requestId.length>100){response(res,400,{error:'Supply a public website URL, vendor category, and import identifier.'},origin);return}
+    const cacheKey=token+':'+body.requestId,cached=importCache.get(cacheKey);if(cached&&cached.url===body.url&&cached.category===body.category){response(res,200,{...cached.result,cached:true},origin);return}
+    if(importing){response(res,409,{error:'A website import is already running. Wait for it to finish.'},origin);return}
+    if(ledger().imports>=importLimits.dailyImports){response(res,429,{error:'The pilot has reached its three-import daily limit.'},origin);return}
+    importing=true;try{
+     const site=await retrieveSite(body.url,{fetchPage:siteFetch,resolve:siteResolve});
+     usage.imports++;fs.writeFileSync(ledgerFile,JSON.stringify(usage));
+     const result=await api('responses',{model:'gpt-6-luna',store:false,reasoning:{effort:'low'},max_output_tokens:importLimits.outputTokens,instructions:importInstructions+' Field identifiers and meanings: '+JSON.stringify(contract.labelsForCategory(body.category)),input:JSON.stringify({category:body.category,sources:site.sources.map(({id,url,title,text})=>({id,url,title,text}))}),text:{format:{type:'json_schema',name:'website_profile_draft',strict:true,schema:importSchema(body.category)}}},'POST',60000);
+     if(result.status!=='completed')throw Error('The extraction hit its output limit. No draft was applied.');
+     const output=result.output?.flatMap(item=>item.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('')||result.output_text;
+     const grounded=groundImport(JSON.parse(output),site,body.category);grounded.importsToday=usage.imports;grounded.model='gpt-6-luna';
+     if(importCache.size>=10)importCache.delete(importCache.keys().next().value);importCache.set(cacheKey,{url:body.url,category:body.category,result:grounded});response(res,200,grounded,origin);
+    }catch(error){response(res,error.status||422,{error:error.apiCode==='insufficient_quota'?'The OpenAI project has no available API quota.':error.status?'The OpenAI extraction request did not complete. No automatic retry was made.':error.message||'Website import did not complete.'},origin)}finally{importing=false}return;
+   }
    if(url.pathname==='/api/voice/session'){
     if(active||creating){response(res,409,{error:'One voice session is already active. End it before starting another.'},origin);return}
     if(ledger().starts>=limits.dailyStarts){response(res,429,{error:'The pilot has reached its ten-start daily limit.'},origin);return}
