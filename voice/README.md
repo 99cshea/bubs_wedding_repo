@@ -11,3 +11,5 @@ Only the fixed private Site origin and the loopback preview origin are accepted.
 Only rep/user transcript text is sent to the extraction backend. Proposed field evidence must occur literally in that text. The rep explicitly applies suggestions to the draft. No changes are sent to a CRM or vendor and no insurance is verified. Session audio is not stored by this app, and API requests set store=false. In-memory captions can be exported by the rep.
 
 References: https://developers.openai.com/api/docs/guides/voice-webrtc, https://developers.openai.com/api/docs/guides/live-delegation, https://developers.openai.com/api/docs/guides/voice-latency-cost.
+
+V12: the vendor assistant connects automatically, with technical controls moved out of the primary UI. Restart this gateway after updating source; the browser checks `fieldContractVersion:12` to avoid using an outdated 46-field service. Both prompts speak directly with the business owner. The shared contract supports all 58 fields for each category and preserves field identifiers end to end. See `voice/vendor-integration.test.mjs` for boundary and mapping checks.
