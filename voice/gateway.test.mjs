@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+import assert from 'node:assert/strict';import http from 'node:http';
 import {createGateway,groundSuggestions} from './gateway.mjs';
 import fs from 'node:fs';import path from 'node:path';
 const origin='http://127.0.0.1:4181',runtime=path.resolve('.voice-runtime/tests-'+Date.now());let upstreamCalls=[];
@@ -7,6 +7,9 @@ const server=createGateway({apiKey:'not-a-real-key',upstream:fake,port:4181,runt
 async function call(route,body,token,requestOrigin=origin){return fetch(origin+'/api/voice/'+route,{method:body===undefined?'GET':'POST',headers:{Origin:requestOrigin,...(body===undefined?{}:{'Content-Type':'application/json'}),...(token?{Authorization:'Bearer '+token}:{})},...(body===undefined?{}:{body:JSON.stringify(body)})})}
 try{
  assert.equal((await call('status',undefined,undefined,'https://unrelated.example')).status,403);
+ for(const route of ['status','connect','import','session'])assert.equal((await call(route,route==='status'?undefined:{},undefined,'https://bubs-vendor-onboarding-demo.safeamber12.chatgpt.site')).status,403,'hosted origin must not reach '+route);
+ assert.equal(upstreamCalls.length,0,'blocked origins incur no OpenAI calls');
+ const rebound=await new Promise((resolve,reject)=>{const request=http.get(origin+'/',{headers:{Host:'attacker.example:4181'}},res=>{res.resume();resolve(res.statusCode)});request.on('error',reject)});assert.equal(rebound,403,'reject non-loopback Host headers');
  assert.equal((await call('session',{sdp:'v=0'})).status,401);
  const token=(await(await call('connect',{})).json()).token;
  assert.equal((await call('session',{sdp:'invalid'},token)).status,400);
