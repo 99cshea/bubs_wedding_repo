@@ -43,12 +43,12 @@ export function createGateway({apiKey,upstream=fetch,port=4180,runtime=path.join
     if(importing){response(res,409,{error:'A website import is already running. Wait for it to finish.'},origin);return}
     if(ledger().imports>=importLimits.dailyImports){response(res,429,{error:'The pilot has reached its three-import daily limit.'},origin);return}
     importing=true;try{
-     const site=await retrieveSite(body.url,{fetchPage:siteFetch,resolve:siteResolve});
+     const startedAt=Date.now();const site=await retrieveSite(body.url,{fetchPage:siteFetch,resolve:siteResolve});const retrievalMs=Date.now()-startedAt;
      usage.imports++;fs.writeFileSync(ledgerFile,JSON.stringify(usage));
-     const result=await api('responses',{model:'gpt-6-luna',store:false,reasoning:{effort:'low'},max_output_tokens:importLimits.outputTokens,instructions:importInstructions+' Field identifiers and meanings: '+JSON.stringify(contract.labelsForCategory(body.category)),input:JSON.stringify({category:body.category,sources:site.sources.map(({id,url,title,text})=>({id,url,title,text}))}),text:{format:{type:'json_schema',name:'website_profile_draft',strict:true,schema:importSchema(body.category)}}},'POST',60000);
+     const extractionStart=Date.now();const result=await api('responses',{model:'gpt-6-luna',store:false,reasoning:{effort:'low'},max_output_tokens:importLimits.outputTokens,instructions:importInstructions+' Field identifiers and meanings: '+JSON.stringify(contract.labelsForCategory(body.category)),input:JSON.stringify({category:body.category,sources:site.sources.map(({id,url,title,text,links})=>({id,url,title,text,links}))}),text:{format:{type:'json_schema',name:'website_profile_draft',strict:true,schema:importSchema(body.category)}}},'POST',120000);
      if(result.status!=='completed')throw Error('The extraction hit its output limit. No draft was applied.');
      const output=result.output?.flatMap(item=>item.content||[]).filter(c=>c.type==='output_text').map(c=>c.text).join('')||result.output_text;
-     const grounded=groundImport(JSON.parse(output),site,body.category);grounded.importsToday=usage.imports;grounded.model='gpt-6-luna';
+     const grounded=groundImport(JSON.parse(output),site,body.category);grounded.importsToday=usage.imports;grounded.model='gpt-6-luna';grounded.timings={retrievalMs,extractionMs:Date.now()-extractionStart,totalMs:Date.now()-startedAt};
      if(importCache.size>=10)importCache.delete(importCache.keys().next().value);importCache.set(cacheKey,{url:body.url,category:body.category,result:grounded});response(res,200,grounded,origin);
     }catch(error){response(res,error.status||422,{error:error.apiCode==='insufficient_quota'?'The OpenAI project has no available API quota.':error.status?'The OpenAI extraction request did not complete. No automatic retry was made.':error.message||'Website import did not complete.'},origin)}finally{importing=false}return;
    }

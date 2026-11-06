@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const text=html=>html.replace(/<(script|style|head|nav)\b[^>]*>[^]*?<\/\1>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
+const pages=fs.readdirSync('dist').filter(p=>p.endsWith('.html'));assert.equal(pages.length,5);let total=0;
+for(const page of pages){const html=fs.readFileSync('dist/'+page,'utf8'),copy=text(html);total+=copy.length;assert(copy.length<6500,page+' exceeds excerpt cap');assert(!/<script/i.test(html),'Content must not need JavaScript');assert(copy.includes('fictional'));assert(copy.includes('AI-generated'));for(const [,image]of html.matchAll(/src="([^"]+)"/g))assert(fs.existsSync('dist/'+image),image);console.log(page,copy.length+' characters')}
+assert(total<24000);const map=JSON.parse(fs.readFileSync('tests/coverage.json'));assert.equal(map.length,49);assert.equal(new Set(map.map(x=>x.field)).size,49);for(const row of map)assert(text(fs.readFileSync('dist/'+row.page,'utf8')).includes(row.passage),row.field+' passage missing');
+const unknown=['insurance','insurer','liability','expiry','license','reference','documentPlan','followup','credit'];assert(map.every(row=>!unknown.includes(row.field)));assert(!fs.existsSync('dist/tests'));
+console.log('PASS: 49 visible public answers, nine deliberately unpublished fields, five static pages, six local images; total '+total+' characters. Coverage map is test-only.');
