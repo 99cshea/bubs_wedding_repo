@@ -9,7 +9,7 @@ out.mkdir(parents=True,exist_ok=True)
 p=out/'golden-hour-sample-certificate.pdf'
 c=canvas.Canvas(str(p),pagesize=(612,792))
 c.setTitle('Sample insurance certificate - Golden Hour Photography - DEMO ONLY')
-c.setAuthor("Bub's fictional demo materials")
+c.setAuthor("I Do! fictional demo materials")
 c.setFillColor(HexColor('#fcf8f5'));c.rect(0,0,612,792,fill=1,stroke=0)
 c.saveState();c.translate(306,396);c.rotate(38);c.setFillColor(Color(.83,.68,.70,alpha=.17));c.setFont('Helvetica-Bold',49);c.drawCentredString(0,0,'SAMPLE - NOT VALID');c.restoreState()
 c.setFillColor(HexColor('#734f62'));c.rect(38,717,536,37,fill=1,stroke=0)
@@ -24,7 +24,7 @@ def block(y,title,lines):
 block(617,'INSURED',['Golden Hour Photography','1200 East 6th Street, Austin, TX 78702','Contact: Alex Morgan | hello@goldenhour.example'])
 block(497,'FICTIONAL PRODUCER / INSURER',['Rosewood Demo Assurance - fictional company','Policy: DEMO-GHP-2027-001','Coverage period: January 1, 2027 - December 31, 2027'])
 block(377,'ILLUSTRATIVE COVERAGE LIMITS',['Commercial general liability','Each occurrence: $1,000,000','General aggregate: $2,000,000'])
-block(257,'CERTIFICATE HOLDER',["Bub's Real Good Weddings & BBQ Inc.",'For onboarding demonstration only.'])
+block(257,'CERTIFICATE HOLDER',["I Do!",'For onboarding demonstration only.'])
 c.setFillColor(HexColor('#734f62'));c.setFont('Helvetica-Bold',10);c.drawString(40,129,'SAMPLE ONLY. NOT EVIDENCE OF INSURANCE.')
 c.setFillColor(HexColor('#75666f'));c.setFont('Helvetica',9)
 for i,line in enumerate(['All entities, policy numbers, coverage and limits shown are fictional.',

@@ -1,4 +1,4 @@
-# Bub's transcript profile evals
+# I Do! transcript profile evals
 
 This suite runs promptfoo 0.125.1 against hand-authored output fixtures. These are examples of extraction strategies, not outputs measured from live models. No API key or model call is required. Do not interpret the scores as model rankings.
 

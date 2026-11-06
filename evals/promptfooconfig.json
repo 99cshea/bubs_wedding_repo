@@ -1,5 +1,5 @@
 {
-  "description": "Bub’s transcript-to-profile: recorded fixture replay, not a live model comparison",
+  "description": "I Do! transcript-to-profile: recorded fixture replay, not a live model comparison",
   "prompts": [
     "Extract a vendor profile from the transcript.\n{{transcript}}"
   ],

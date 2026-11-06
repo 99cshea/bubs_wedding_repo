@@ -1,4 +1,4 @@
-# Bub’s vendor onboarding demo
+# I Do! vendor onboarding demo
 
 The main experience is now vendor self-service: choose a business category, start from a sample website or blank draft, review business information, confirm services and pricing, add a cover and optional private insurance document, preview, and publish a finished demo listing.
 
