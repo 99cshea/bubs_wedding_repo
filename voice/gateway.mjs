@@ -41,7 +41,7 @@ export function createGateway({apiKey,upstream=fetch,port=4180,runtime=path.join
     if(!contract.categories[body.category]||typeof body.url!=='string'||body.url.length>2000||typeof body.requestId!=='string'||body.requestId.length>100){response(res,400,{error:'Supply a public website URL, vendor category, and import identifier.'},origin);return}
     const cacheKey=token+':'+body.requestId,cached=importCache.get(cacheKey);if(cached&&cached.url===body.url&&cached.category===body.category){response(res,200,{...cached.result,cached:true},origin);return}
     if(importing){response(res,409,{error:'A website import is already running. Wait for it to finish.'},origin);return}
-    if(ledger().imports>=importLimits.dailyImports){response(res,429,{error:'The pilot has reached its three-import daily limit.'},origin);return}
+    if(ledger().imports>=importLimits.dailyImports){response(res,429,{error:`The pilot has reached its ${importLimits.dailyImports}-import daily limit.`},origin);return}
     importing=true;try{
      const startedAt=Date.now();const site=await retrieveSite(body.url,{fetchPage:siteFetch,resolve:siteResolve});const retrievalMs=Date.now()-startedAt;
      usage.imports++;fs.writeFileSync(ledgerFile,JSON.stringify(usage));

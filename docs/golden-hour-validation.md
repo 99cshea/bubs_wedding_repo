@@ -28,4 +28,8 @@ The following nine fields remained absent in BOTH runs: insurance status, insure
 - Frontend tests: deliberate fresh identifiers vs retry identifier reuse, no fictional fallback on failure, shortcut changes only category/URL, review never auto-applies, applied answers retain source URLs, clean draft replacement preserves prior published snapshot, raw pages are not persisted into the saved browser draft.
 - Existing owner-assistant, voice schema, pricing confirmation, private-field exclusion and published-snapshot tests pass.
 
-The two paid freshness calls were exercised through the actual local gateway using `tools/validate-golden-hour-live.mjs`; frontend fresh-read actions and apply behavior were tested separately without paid requests. To repeat costs money and consumes the normal three-import daily allowance. Live extraction still requires the local gateway at 127.0.0.1:4180; Golden Hour itself is independently public and needs no gateway.
+The two paid freshness calls were exercised through the actual local gateway using `tools/validate-golden-hour-live.mjs`; frontend fresh-read actions and apply behavior were tested separately without paid requests. To repeat costs money and consumes the normal daily import allowance. Live extraction still requires the local gateway at 127.0.0.1:4180; Golden Hour itself is independently public and needs no gateway.
+
+## Rehearsal limit update
+
+After the initial validation, the user raised the daily website-import limit to 10. Existing usage remains counted; a service restart does not reset the ledger. No automatic retries and duplicate-request caching remain in place. The regression test permits ten distinct model requests, recovers their cached repeats, and rejects the eleventh.
